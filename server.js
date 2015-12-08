@@ -20,7 +20,7 @@ var port = process.env.PORT || 8080;        // set our port
 var router = express.Router();              // get an instance of the express Router
 
 //Middleware for all requests
-router.use(function(req,res){
+router.use(function(req,res,next){
    //do logging
     console.log('something is happening.');
     next();
